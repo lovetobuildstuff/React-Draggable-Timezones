@@ -1,0 +1,93 @@
+body
+  background rgb(2, 7, 0)
+  overflow hidden
+  font-family 'Inconsolata', monospace;
+  
+html, body, #container, #container > div, .all-timezones
+  height 100%
+  
+.timepole
+  position fixed
+  left 50%
+  border-left 1px solid rgba(0, 0, 0, 0.5)
+  top 0
+  height 100%
+  z-index 1
+  width 1px
+  
+.time-readout
+  background white
+  color black
+  width 80px
+  border-radius 5px
+  padding 4px
+  text-align center
+  transform translateX(-50%)
+  pointer-events none
+  margin 28px 0 44px
+  
+  
+.timezone
+  width 60%
+  height 60px
+  line-height 60px
+  text-align center
+  color white
+  margin 10px
+  position relative
+  &:before
+    content ""
+    position absolute
+    left -9999px
+    right -9999px
+    top 0
+    height 100%
+    z-index -1
+  &.timezone-aus
+    left 75%
+    background linear-gradient(
+      to right,
+      transparent,
+      #DC665D 20%,
+      #DC665D 80%,
+      transparent
+    )
+  &.timezone-us-west
+    left 50%
+    background linear-gradient(
+      to right,
+      transparent,
+      #A970DB 20%,
+      #A970DB 80%,
+      transparent
+    )
+  &.timezone-us-east
+    left 40%
+    background linear-gradient(
+      to right,
+      transparent,
+      #66A6F3 20%,
+      #66A6F3 80%,
+      transparent
+    )
+  &.timezone-england
+    left 10%
+    background linear-gradient(
+      to right,
+      transparent,
+      #B666A3 20%,
+      #B666A3 80%,
+      transparent
+    )
+    
+    
+.about
+  position fixed
+  bottom 0
+  right 0
+  background white
+  padding 1rem
+  max-width 500px
+  h1 
+    margin 0
+    font-size 1.3rem

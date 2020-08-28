@@ -1,0 +1,89 @@
+body {
+  background: #020700;
+  overflow: hidden;
+  font-family: 'Inconsolata', monospace;
+}
+
+html,
+body,
+#container,
+#container>div,
+.all-timezones {
+  height: 100%;
+}
+
+.timepole {
+  position: fixed;
+  left: 50%;
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  top: 0;
+  height: 100%;
+  z-index: 1;
+  width: 1px;
+}
+
+.time-readout {
+  background: #fff;
+  color: #000;
+  width: 80px;
+  border-radius: 5px;
+  padding: 4px;
+  text-align: center;
+  transform: translateX(-50%);
+  pointer-events: none;
+  margin: 28px 0 44px;
+}
+
+.timezone {
+  width: 60%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  margin: 10px;
+  position: relative;
+}
+
+.timezone:before {
+  content: "";
+  position: absolute;
+  left: -9999px;
+  right: -9999px;
+  top: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+.timezone.timezone-aus {
+  left: 75%;
+  background: linear-gradient(to right, transparent, #dc665d 20%, #dc665d 80%, transparent);
+}
+
+.timezone.timezone-us-west {
+  left: 50%;
+  background: linear-gradient(to right, transparent, #a970db 20%, #a970db 80%, transparent);
+}
+
+.timezone.timezone-us-east {
+  left: 40%;
+  background: linear-gradient(to right, transparent, #66a6f3 20%, #66a6f3 80%, transparent);
+}
+
+.timezone.timezone-england {
+  left: 10%;
+  background: linear-gradient(to right, transparent, #b666a3 20%, #b666a3 80%, transparent);
+}
+
+.about {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  padding: 1rem;
+  max-width: 500px;
+}
+
+.about h1 {
+  margin: 0;
+  font-size: 1.3rem;
+}
